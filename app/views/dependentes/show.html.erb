@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dependente.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @dependente.cpf %>
+</p>
+
+<p>
+  <strong>Filiacao:</strong>
+  <%= @dependente.filiacao %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= @dependente.funcionario %>
+</p>
+
+<%= link_to 'Edit', edit_dependente_path(@dependente) %> |
+<%= link_to 'Back', dependentes_path %>

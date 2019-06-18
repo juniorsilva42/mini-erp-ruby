@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MiniErp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +11,38 @@
   </head>
 
   <body>
-    <%= yield %>
+      <div class="nav-side-menu">
+          <div class="brand">Mini ERP</div>
+          <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+          <div class="menu-list">
+              <ul id="menu-content" class="menu-content collapse out">
+                  <li data-toggle="collapse" data-target="#funcionarios" class="collapsed active">
+                      <a href="#"><i class="fa fa-gift fa-lg"></i> Funcionários <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="funcionarios">
+                      <li class="active">
+                        <a href="/funcionarios/new">Adicionar novo</a>
+                      </li>
+                      <li><a href="/funcionarios">Listar todos</a></li>
+                  </ul>
+
+                  <li data-toggle="collapse" data-target="#dependentes" class="collapsed">
+                      <a href="#"><i class="fa fa-gift fa-lg"></i>Dependentes <span class="arrow"></span></a>
+                  </li>
+                  <ul class="sub-menu collapse" id="dependentes">
+                      <li class="active"><a href="#">Adicionar novo</a></li>
+                      <li><a href="#">Listar todos</a></li>
+                  </ul>
+              </ul>
+          </div>
+      </div>
+
+      <div class="container" id="main">
+          <div class="row">
+              <div class="col-md-12">
+                        <%= yield %>
+              </div>
+          </div>
+      </div>
   </body>
 </html>

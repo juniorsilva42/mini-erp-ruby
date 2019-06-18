@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dependentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Filiacao</th>
+      <th>Funcionario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dependentes.each do |dependente| %>
+      <tr>
+        <td><%= dependente.nome %></td>
+        <td><%= dependente.cpf %></td>
+        <td><%= dependente.filiacao %></td>
+        <td><%= dependente.funcionario %></td>
+        <td><%= link_to 'Show', dependente %></td>
+        <td><%= link_to 'Edit', edit_dependente_path(dependente) %></td>
+        <td><%= link_to 'Destroy', dependente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dependente', new_dependente_path %>
