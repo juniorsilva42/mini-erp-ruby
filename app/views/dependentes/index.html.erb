@@ -19,15 +19,11 @@
         <td><%= dependente.nome %></td>
         <td><%= dependente.cpf %></td>
         <td><%= dependente.filiacao %></td>
-        <td><%= dependente.funcionario %></td>
-        <td><%= link_to 'Show', dependente %></td>
-        <td><%= link_to 'Edit', edit_dependente_path(dependente) %></td>
-        <td><%= link_to 'Destroy', dependente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%= link_to 'Ver', dependente %></td>
+        <td><%= link_to 'Editar', edit_dependente_path(dependente) %></td>
+        <td><%= link_to 'Deletar', dependente, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Dependente', new_dependente_path %>

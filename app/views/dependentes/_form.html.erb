@@ -1,4 +1,4 @@
-<%= form_with(model: dependente, local: true) do |form| %>
+<%= bootstrap_form_for @dependente do |f| %>
   <% if dependente.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(dependente.errors.count, "error") %> prohibited this dependente from being saved:</h2>
@@ -12,26 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= f.text_field :nome %>
   </div>
 
   <div class="field">
-    <%= form.label :cpf %>
-    <%= form.text_field :cpf %>
+    <%= f.text_field :cpf %>
   </div>
 
   <div class="field">
-    <%= form.label :filiacao %>
-    <%= form.text_field :filiacao %>
+    <%= f.text_field :filiacao %>
   </div>
 
   <div class="field">
-    <%= form.label :funcionario_id %>
-    <%= form.text_field :funcionario_id %>
+    Associado ao <%= f.select :funcionario, @funcionario.collect { |f| [f.nome, f.id]} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
 <% end %>

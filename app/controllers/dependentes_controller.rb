@@ -15,6 +15,7 @@ class DependentesController < ApplicationController
   # GET /dependentes/new
   def new
     @dependente = Dependente.new
+    @funcionario = Funcionario.all
   end
 
   # GET /dependentes/1/edit
@@ -25,7 +26,8 @@ class DependentesController < ApplicationController
   # POST /dependentes.json
   def create
     @dependente = Dependente.new(dependente_params)
-
+    @funcionario = Funcionario.find_by_id(params[:id])
+    
     respond_to do |format|
       if @dependente.save
         format.html { redirect_to @dependente, notice: 'Dependente was successfully created.' }

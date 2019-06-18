@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_204949) do
+ActiveRecord::Schema.define(version: 2019_06_18_221426) do
+
+  create_table "dependentes", force: :cascade do |t|
+    t.string "nome"
+    t.string "cpf"
+    t.string "filiacao"
+    t.integer "funcionario_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["funcionario_id"], name: "index_dependentes_on_funcionario_id"
+  end
 
   create_table "funcionarios", force: :cascade do |t|
     t.string "nome"

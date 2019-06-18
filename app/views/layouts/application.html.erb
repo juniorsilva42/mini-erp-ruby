@@ -16,7 +16,7 @@
           <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
           <div class="menu-list">
               <ul id="menu-content" class="menu-content collapse out">
-                  <li data-toggle="collapse" data-target="#funcionarios" class="collapsed active">
+                  <li data-toggle="collapse" data-target="#funcionarios" class="active">
                       <a href="#"><i class="fa fa-gift fa-lg"></i> Funcionários <span class="arrow"></span></a>
                   </li>
                   <ul class="sub-menu collapse" id="funcionarios">
@@ -26,12 +26,14 @@
                       <li><a href="/funcionarios">Listar todos</a></li>
                   </ul>
 
-                  <li data-toggle="collapse" data-target="#dependentes" class="collapsed">
+                  <li data-toggle="collapse" data-target="#dependentes">
                       <a href="#"><i class="fa fa-gift fa-lg"></i>Dependentes <span class="arrow"></span></a>
                   </li>
                   <ul class="sub-menu collapse" id="dependentes">
-                      <li class="active"><a href="#">Adicionar novo</a></li>
-                      <li><a href="#">Listar todos</a></li>
+                      <li class="active">
+                        <a href="/dependentes/new">Adicionar novo</a>
+                      </li>
+                      <li><a href="/dependentes">Listar todos</a></li>
                   </ul>
               </ul>
           </div>
