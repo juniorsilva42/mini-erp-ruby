@@ -1,24 +1,22 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Mini ERP - Trabalho 3 / 3 
+#### Mini ERP Ruby
 
-Things you may want to cover:
+Disciplina: Linguagem de Programação e Algoritmos III   
+Docente: Prof. MSc. Giovane Sousa      
+Discente: Ivanicio Junior
 
-* Ruby version
+### Descrição
 
-* System dependencies
+Mini ERP feito em Ruby para treinar o padrão arquitetural MVC dentro do contexto de uma aplicação Web.
 
-* Configuration
 
-* Database creation
+### Informações
+  - Prazo de entrega: 19/06/2019;
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Instalação
+  1. Clonar o repositório ou baixar
+      - ``` git clone git@github.com:jsiilva1/mini-erp-ruby.git ```
+   
+  2. No diretório raiz do projeto, baixar as dependências   
+      - ``` bundle install ```
